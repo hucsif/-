@@ -1,0 +1,1094 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048ede
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (26) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 29 2026 10:36:52[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00500000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=2c7210h (2912784) map[0m
+[0;32mI (621) esp_image: segment 1: paddr=002d7238 vaddr=3fca0400 size=05138h ( 20792) load[0m
+[0;32mI (626) esp_image: segment 2: paddr=002dc378 vaddr=40374000 size=03ca0h ( 15520) load[0m
+[0;32mI (631) esp_image: segment 3: paddr=002e0020 vaddr=42000020 size=d8d60h (888160) map[0m
+[0;32mI (795) esp_image: segment 4: paddr=003b8d88 vaddr=40377ca0 size=18670h ( 99952) load[0m
+[0;32mI (828) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (829) boot: Disabling RNG early entropy source...[0m
+[0;32mI (840) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (840) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (841) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (846) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (851) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (856) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (861) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (867) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (873) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (878) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (884) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (890) MSPI Timing: PSRAM timing tuning index: 10[0m
+[0;32mI (895) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (900) esp_psram: Speed: 80MHz[0m
+[0;32mI (904) cpu_start: Multicore app[0m
+[0;32mI (1353) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1363) cpu_start: Pro cpu start user code[0m
+[0;32mI (1363) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1363) app_init: Application information:[0m
+[0;32mI (1366) app_init: Project name:     smart_surveillance[0m
+[0;32mI (1372) app_init: App version:      1[0m
+[0;32mI (1376) app_init: Compile time:     Apr 29 2026 10:36:49[0m
+[0;32mI (1382) app_init: ELF file SHA256:  3201f77c2...[0m
+[0;32mI (1388) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (1392) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1397) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1402) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1407) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1415) heap_init: At 3FCA6AA8 len 00042C68 (267 KiB): RAM[0m
+[0;32mI (1421) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1427) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1433) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[0;32mI (1440) esp_psram: Adding pool of 8178K of PSRAM memory to heap allocator[0m
+[0;32mI (1448) spi_flash: detected chip: boya[0m
+[0;32mI (1451) spi_flash: flash io: dio[0m
+[0;33mW (1455) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;32mI (1469) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1476) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1483) main_task: Started on CPU0[0m
+[0;32mI (1493) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1493) main_task: Calling app_main()[0m
+[0;32mI (1513) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1523) gpio: GPIO[17]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1523) uart: queue free spaces: 20[0m
+[0;32mI (1533) stm32_uart: UART初始化成功！[0m
+[0;32mI (1533) pp: pp rom version: e7ae62f[0m
+[0;32mI (1543) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1553) wifi:wifi driver task: 3fcb8af8, prio:23, stack:6656, core=0[0m
+[0;32mI (1563) wifi:wifi firmware version: 0caa81945[0m
+[0;32mI (1563) wifi:wifi certification version: v7.0[0m
+[0;32mI (1563) wifi:config NVS flash: enabled[0m
+[0;32mI (1563) wifi:config nano formating: disabled[0m
+[0;32mI (1563) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1573) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1573) wifi:Init management short buffer num: 32[0m
+[0;32mI (1583) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1583) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1583) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1593) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1593) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1603) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1603) wifi_init: rx ba win: 6[0m
+[0;32mI (1603) wifi_init: accept mbox: 6[0m
+[0;32mI (1613) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1613) wifi_init: udp mbox: 6[0m
+[0;32mI (1623) wifi_init: tcp mbox: 6[0m
+[0;32mI (1623) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1623) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1633) wifi_init: tcp mss: 1440[0m
+[0;32mI (1633) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1643) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1643) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1653) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (1693) wifi:mode : sta (9c:13:9e:aa:e2:4c)[0m
+[0;32mI (1693) wifi:enable tsf[0m
+[0;32mI (1693) wifi_manager: wifi初始化完成[0m
+Free heap: 8519388 bytes
+Chip model: esp32s3
+[0;32mI (1703) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:5, snd_ch_cfg:0x0[0m
+[0;32mI (1703) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1723) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2723) wifi:state: assoc -> init (0x2700)[0m
+[0;32mI (2723) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:5, snd_ch_cfg:0x0[0m
+[0;32mI (2723) wifi_manager: connect to the AP fail,retry now[0m
+[0;32mI (5133) wifi_manager: connect to the AP fail,retry now[0m
+[0;32mI (5133) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:5, snd_ch_cfg:0x0[0m
+[0;32mI (5143) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (5143) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (5173) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (5193) wifi:connected with OPPO Reno7 5G, aid = 3, channel 11, BW20, bssid = 5a:dd:53:58:f4:67[0m
+[0;32mI (5193) wifi:security: WPA2-PSK, phy: bgn, rssi: -25[0m
+[0;32mI (5193) wifi:pm start, type: 1[0m
+
+[0;32mI (5193) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (5203) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (5213) wifi_manager: Connected to AP[0m
+[0;32mI (5223) wifi:<ba-add>idx:0 (ifx:0, 5a:dd:53:58:f4:67), tid:0, ssn:0, winSize:64[0m
+[0;32mI (5273) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (5273) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (5553) wifi:<ba-add>idx:1 (ifx:0, 5a:dd:53:58:f4:67), tid:6, ssn:2, winSize:64[0m
+[0;32mI (6213) esp_netif_handlers: sta ip: 192.168.87.37, mask: 255.255.255.0, gw: 192.168.87.72[0m
+[0;32mI (6213) wifi_manager: Get ip address[0m
+[0;32mI (6213) main: wifi connect success[0m
+[0;32mI (6713) WebSocket Server: WebSocket 发送任务启动[0m
+[0;32mI (6713) WebSocket Server: 等待队列数据, client_sockfd=-1[0m
+[0;32mI (6713) stm32_uart: UART 任务启动，运行在核心 1[0m
+[0;32mI (6713) WebSocket Server: HTTP 服务器启动成功[0m
+[0;32mI (6723) WebSocket Server: WebSocket 路由注册成功: /ws[0m
+[0;32mI (6733) WebSocket Server: HTTP 路由注册成功: /[0m
+[0;32mI (6733) WebSocket Server: 最新帧路由注册成功: /latest_frame[0m
+[0;32mI (6743) WebSocket Server: Web 服务器启动成功，端口: 80[0m
+[0;32mI (6743) http_camera: HTTP Camera initialized[0m
+[0;32mI (6753) FIRE_DETECTOR: 初始化火焰分类器...[0m
+[0;32mI (6763) FIRE_DETECTOR: 模型数据地址: 0x3c0fe7f8[0m
+[0;32mI (6763) FIRE_DETECTOR: 模型数据大小: 2706528 bytes[0m
+[0;32mI (6773) FIRE_DETECTOR: 模型数据前16字节:[0m
+[0;32mI (6773) FIRE_DETECTOR: 1c 00 00 00 54 46 4c 33 14 00 20 00 1c 00 18 00 [0m
+[0;32mI (6783) FIRE_DETECTOR: 模型版本: 3[0m
+[0;32mI (6783) FIRE_DETECTOR: Tensor Arena分配成功: 3072 KB[0m
+[0;32mI (6903) FIRE_DETECTOR: 火焰分类器初始化成功[0m
+[0;32mI (6903) FIRE_DETECTOR:   输入: 224 x 224 x 3, 类型: 3[0m
+[0;32mI (6903) FIRE_DETECTOR:   输出: 2 个值, 类型: 3[0m
+[0;31mE (11923) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (11923) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (11923) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (11923) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (17943) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (17943) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (17943) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (17943) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (23963) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (23963) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (23963) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (23963) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (24973) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;32mI (27303) http_camera: 图像大小: 68465 bytes (无分辨率信息)[0m
+[0;32mI (27473) http_camera: JPEG头验证通过[0m
+[0;32mI (27483) http_camera: 帧获取成功: 68465 bytes (尝试 1)[0m
+[0;32mI (27483) http_camera: 获取帧: 68465 bytes[0m
+[0;32mI (27483) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 68465[0m
+[0;32mI (27493) IMAGE_PROC: RGB缓冲区分配成功: 147 KB[0m
+[0;32mI (27493) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (27623) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (27623) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (27623) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (27633) FIRE_DETECTOR: 输入数据前100字节和: 15527[0m
+[0;32mI (27653) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (27653) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (27653) FIRE_DETECTOR: 预处理耗时: 27015 us (27 ms)[0m
+[0;32mI (27653) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (46863) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19204370 us (19204 ms)[0m
+[0;32mI (46863) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (46873) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (46873) FIRE_DETECTOR: 原始输出: 0, scale: 0.003906, zero: 0, 概率: 0.000000[0m
+[0;32mI (46883) FIRE_DETECTOR: 低温环境(0℃)，阈值提高至 0.7[0m
+[0;32mI (46893) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (46893) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (46903) FIRE_DETECTOR:    预处理: 27015 us (27 ms)[0m
+[0;32mI (46903) FIRE_DETECTOR:    推理: 19204370 us (19204 ms)[0m
+[0;32mI (46913) FIRE_DETECTOR:    总计: 19271876 us (19271 ms)[0m
+[0;33mW (46923) WebSocket Server: 无客户端连接，无法发送告警[0m
+[0;32mI (46923) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 1.00, 有火概率: 0.00)[0m
+[0;32mI (46933) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (46943) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (48963) http_camera: 图像大小: 49486 bytes (无分辨率信息)[0m
+[0;32mI (49073) http_camera: JPEG头验证通过[0m
+[0;32mI (49073) http_camera: 帧获取成功: 49486 bytes (尝试 1)[0m
+[0;32mI (49073) http_camera: 获取帧: 49486 bytes[0m
+[0;32mI (49083) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 49486[0m
+[0;32mI (49093) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (49203) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (49203) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (49203) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (49213) FIRE_DETECTOR: 输入数据前100字节和: 12380[0m
+[0;32mI (49233) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (49233) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (49233) FIRE_DETECTOR: 预处理耗时: 27194 us (27 ms)[0m
+[0;32mI (49233) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (56403) WebSocket Server: 收到 HTTP 请求: /[0m
+[0;32mI (56433) WebSocket Server: HTML 页面发送成功 (10476 字节)[0m
+[0;32mI (56483) WebSocket Server: 握手结束，新连接已建立[0m
+[0;32mI (56483) WebSocket Server: Save client_fds:59[0m
+[0;33mW (56793) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (56793) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (68243) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (68243) stm32_uart: 完整数据帧: T26H60L270S0#[0m
+[0;32mI (68243) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (68253) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (68253) stm32_uart: 温度(AX): 26[0m
+[0;32mI (68263) stm32_uart: 湿度(AY): 60[0m
+[0;32mI (68263) stm32_uart: 光照(AZ): 270[0m
+[0;32mI (68263) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (68273) stm32_uart: ===========================
+[0m
+[0;32mI (68313) WebSocket Server: 等待队列数据, client_sockfd=59[0m
+[0;32mI (68473) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19231125 us (19231 ms)[0m
+[0;32mI (68473) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (68473) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (68483) FIRE_DETECTOR: 原始输出: 0, scale: 0.003906, zero: 0, 概率: 0.000000[0m
+[0;32mI (68493) FIRE_DETECTOR: 低温环境(0℃)，阈值提高至 0.7[0m
+[0;32mI (68493) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (68503) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (68503) FIRE_DETECTOR:    预处理: 27194 us (27 ms)[0m
+[0;32mI (68513) FIRE_DETECTOR:    推理: 19231125 us (19231 ms)[0m
+[0;32mI (68523) FIRE_DETECTOR:    总计: 19298812 us (19298 ms)[0m
+[0;32mI (68523) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.00[0m
+[0;32mI (68533) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 1.00, 有火概率: 0.00)[0m
+[0;32mI (68543) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (68543) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (70383) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (70383) stm32_uart: 完整数据帧: T26H60L269S0#[0m
+[0;32mI (70383) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (70393) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (70393) stm32_uart: 温度(AX): 26[0m
+[0;32mI (70403) stm32_uart: 湿度(AY): 60[0m
+[0;32mI (70403) stm32_uart: 光照(AZ): 269[0m
+[0;32mI (70403) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (70413) stm32_uart: ===========================
+[0m
+[0;32mI (70423) WebSocket Server: 等待队列数据, client_sockfd=59[0m
+[0;32mI (70723) http_camera: 图像大小: 47218 bytes (无分辨率信息)[0m
+[0;32mI (70833) http_camera: JPEG头验证通过[0m
+[0;32mI (70843) http_camera: 帧获取成功: 47218 bytes (尝试 1)[0m
+[0;32mI (70843) http_camera: 获取帧: 47218 bytes[0m
+[0;32mI (70843) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 47218[0m
+[0;32mI (70853) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (70963) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (70963) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (70963) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (70973) FIRE_DETECTOR: 输入数据前100字节和: 12524[0m
+[0;32mI (70993) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (70993) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (70993) FIRE_DETECTOR: 预处理耗时: 27015 us (27 ms)[0m
+[0;32mI (70993) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (72523) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (72523) stm32_uart: 完整数据帧: T26H60L269S0#[0m
+[0;32mI (72523) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (72533) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (72533) stm32_uart: 温度(AX): 26[0m
+[0;32mI (72543) stm32_uart: 湿度(AY): 60[0m
+[0;32mI (72543) stm32_uart: 光照(AZ): 269[0m
+[0;32mI (72543) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (72553) stm32_uart: ===========================
+[0m
+[0;32mI (72593) WebSocket Server: 等待队列数据, client_sockfd=59[0m
+[0;32mI (74123) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (74123) stm32_uart: 完整数据帧: T26H60L269S0#[0m
+[0;32mI (74123) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (74133) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (74133) stm32_uart: 温度(AX): 26[0m
+[0;32mI (74143) stm32_uart: 湿度(AY): 60[0m
+[0;32mI (74143) stm32_uart: 光照(AZ): 269[0m
+[0;32mI (74143) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (74153) stm32_uart: ===========================
+[0m
+[0;32mI (74183) WebSocket Server: 等待队列数据, client_sockfd=59[0m
+[0;32mI (76263) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (76263) stm32_uart: 完整数据帧: T26H60L269S0#[0m
+[0;32mI (76263) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (76273) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (76273) stm32_uart: 温度(AX): 26[0m
+[0;32mI (76283) stm32_uart: 湿度(AY): 60[0m
+[0;32mI (76283) stm32_uart: 光照(AZ): 269[0m
+[0;32mI (76283) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (76293) stm32_uart: ===========================
+[0m
+[0;32mI (76323) WebSocket Server: 等待队列数据, client_sockfd=59[0m
+[0;32mI (78393) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (78393) stm32_uart: 完整数据帧: T26H59L269S0#[0m
+[0;32mI (78393) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (78403) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (78413) stm32_uart: 温度(AX): 26[0m
+[0;32mI (78413) stm32_uart: 湿度(AY): 59[0m
+[0;32mI (78413) stm32_uart: 光照(AZ): 269[0m
+[0;32mI (78423) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (78423) stm32_uart: ===========================
+[0m
+[0;32mI (78453) WebSocket Server: 等待队列数据, client_sockfd=59[0m
+[0;32mI (80543) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (80543) stm32_uart: 完整数据帧: T26H59L269S0#[0m
+[0;32mI (80543) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (80553) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (80553) stm32_uart: 温度(AX): 26[0m
+[0;32mI (80563) stm32_uart: 湿度(AY): 59[0m
+[0;32mI (80563) stm32_uart: 光照(AZ): 269[0m
+[0;32mI (80563) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (80573) stm32_uart: ===========================
+[0m
+[0;32mI (80613) WebSocket Server: 等待队列数据, client_sockfd=59[0m
+[0;32mI (90263) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19260693 us (19260 ms)[0m
+[0;32mI (90263) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (90263) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (90273) FIRE_DETECTOR: 原始输出: 0, scale: 0.003906, zero: 0, 概率: 0.000000[0m
+[0;32mI (90283) FIRE_DETECTOR: 正常环境(26℃)，阈值 0.6[0m
+[0;32mI (90283) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (90293) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (90293) FIRE_DETECTOR:    预处理: 27015 us (27 ms)[0m
+[0;32mI (90303) FIRE_DETECTOR:    推理: 19260693 us (19260 ms)[0m
+[0;32mI (90313) FIRE_DETECTOR:    总计: 19327503 us (19327 ms)[0m
+[0;32mI (90313) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.00[0m
+[0;32mI (90323) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 1.00, 有火概率: 0.00)[0m
+[0;32mI (90333) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (90333) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (92633) http_camera: 图像大小: 33181 bytes (无分辨率信息)[0m
+[0;32mI (92733) http_camera: JPEG头验证通过[0m
+[0;32mI (92743) http_camera: 帧获取成功: 33181 bytes (尝试 1)[0m
+[0;32mI (92743) http_camera: 获取帧: 33181 bytes[0m
+[0;32mI (92743) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 33181[0m
+[0;32mI (92753) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (92853) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (92853) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (92853) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (92863) FIRE_DETECTOR: 输入数据前100字节和: 7603[0m
+[0;32mI (92883) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (92883) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (92883) FIRE_DETECTOR: 预处理耗时: 26924 us (26 ms)[0m
+[0;32mI (92883) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (112093) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19203412 us (19203 ms)[0m
+[0;32mI (112093) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (112103) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (112103) FIRE_DETECTOR: 原始输出: 64, scale: 0.003906, zero: 0, 概率: 0.250000[0m
+[0;32mI (112113) FIRE_DETECTOR: 正常环境(26℃)，阈值 0.6[0m
+[0;32mI (112123) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (112123) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (112133) FIRE_DETECTOR:    预处理: 26924 us (26 ms)[0m
+[0;32mI (112133) FIRE_DETECTOR:    推理: 19203412 us (19203 ms)[0m
+[0;32mI (112143) FIRE_DETECTOR:    总计: 19270740 us (19270 ms)[0m
+[0;32mI (112153) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.25[0m
+[0;32mI (112153) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 0.75, 有火概率: 0.25)[0m
+[0;32mI (112163) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (112173) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (114373) http_camera: 图像大小: 50400 bytes (无分辨率信息)[0m
+[0;32mI (114533) http_camera: JPEG头验证通过[0m
+[0;32mI (114533) http_camera: 帧获取成功: 50400 bytes (尝试 1)[0m
+[0;32mI (114533) http_camera: 获取帧: 50400 bytes[0m
+[0;32mI (114533) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 50400[0m
+[0;32mI (114543) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (114653) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (114653) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (114663) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (114663) FIRE_DETECTOR: 输入数据前100字节和: 10625[0m
+[0;32mI (114683) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (114683) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (114683) FIRE_DETECTOR: 预处理耗时: 27402 us (27 ms)[0m
+[0;32mI (114693) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (133913) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19212269 us (19212 ms)[0m
+[0;32mI (133913) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (133913) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (133913) FIRE_DETECTOR: 原始输出: 0, scale: 0.003906, zero: 0, 概率: 0.000000[0m
+[0;32mI (133923) FIRE_DETECTOR: 正常环境(26℃)，阈值 0.6[0m
+[0;32mI (133933) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (133943) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (133943) FIRE_DETECTOR:    预处理: 27402 us (27 ms)[0m
+[0;32mI (133953) FIRE_DETECTOR:    推理: 19212269 us (19212 ms)[0m
+[0;32mI (133953) FIRE_DETECTOR:    总计: 19280112 us (19280 ms)[0m
+[0;32mI (133963) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.00[0m
+[0;32mI (133973) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 1.00, 有火概率: 0.00)[0m
+[0;32mI (133983) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (133983) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (136263) http_camera: 图像大小: 59248 bytes (无分辨率信息)[0m
+[0;32mI (136423) http_camera: JPEG头验证通过[0m
+[0;32mI (136423) http_camera: 帧获取成功: 59248 bytes (尝试 1)[0m
+[0;32mI (136423) http_camera: 获取帧: 59248 bytes[0m
+[0;32mI (136433) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 59248[0m
+[0;32mI (136443) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (136553) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (136553) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (136563) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (136563) FIRE_DETECTOR: 输入数据前100字节和: 5648[0m
+[0;32mI (136583) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (136583) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (136583) FIRE_DETECTOR: 预处理耗时: 27323 us (27 ms)[0m
+[0;32mI (136593) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (155803) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19202846 us (19202 ms)[0m
+[0;32mI (155803) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (155803) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (155803) FIRE_DETECTOR: 原始输出: 162, scale: 0.003906, zero: 0, 概率: 0.632812[0m
+[0;32mI (155813) FIRE_DETECTOR: 正常环境(26℃)，阈值 0.6[0m
+[0;32mI (155823) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (155833) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (155833) FIRE_DETECTOR:    预处理: 27323 us (27 ms)[0m
+[0;32mI (155843) FIRE_DETECTOR:    推理: 19202846 us (19202 ms)[0m
+[0;32mI (155843) FIRE_DETECTOR:    总计: 19270785 us (19270 ms)[0m
+[0;32mI (155853) WebSocket Server: 火焰告警已发送: detected=1, confidence=0.63[0m
+[0;32mI (155863) IMAGE_PROC: 🔥 检测到火焰! 置信度: 0.63[0m
+[0;32mI (155863) http_camera: 🔥 检测到火焰! (第 6 帧, 累计 1 次)[0m
+[0;32mI (155873) WebSocket Server: 火焰告警已发送: detected=1, confidence=0.63[0m
+[0;32mI (155883) stm32_uart: 发送指令: 0x01[0m
+[0;32mI (155883) stm32_uart: 发送蜂鸣器开启指令[0m
+[0;32mI (158073) http_camera: 图像大小: 45281 bytes (无分辨率信息)[0m
+[0;32mI (158213) http_camera: JPEG头验证通过[0m
+[0;32mI (158213) http_camera: 帧获取成功: 45281 bytes (尝试 1)[0m
+[0;32mI (158213) http_camera: 获取帧: 45281 bytes[0m
+[0;32mI (158223) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 45281[0m
+[0;32mI (158233) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (158343) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (158343) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (158343) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (158343) FIRE_DETECTOR: 输入数据前100字节和: 10343[0m
+[0;32mI (158363) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (158363) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (158363) FIRE_DETECTOR: 预处理耗时: 27926 us (27 ms)[0m
+[0;32mI (158373) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (177583) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19200179 us (19200 ms)[0m
+[0;32mI (177583) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (177583) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (177583) FIRE_DETECTOR: 原始输出: 9, scale: 0.003906, zero: 0, 概率: 0.035156[0m
+[0;32mI (177593) FIRE_DETECTOR: 正常环境(26℃)，阈值 0.6[0m
+[0;32mI (177603) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (177613) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (177613) FIRE_DETECTOR:    预处理: 27926 us (27 ms)[0m
+[0;32mI (177623) FIRE_DETECTOR:    推理: 19200179 us (19200 ms)[0m
+[0;32mI (177623) FIRE_DETECTOR:    总计: 19268546 us (19268 ms)[0m
+[0;32mI (177633) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.04[0m
+[0;32mI (177643) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 0.96, 有火概率: 0.04)[0m
+[0;32mI (177653) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (177653) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (179883) http_camera: 图像大小: 54829 bytes (无分辨率信息)[0m
+[0;32mI (180033) http_camera: JPEG头验证通过[0m
+[0;32mI (180033) http_camera: 帧获取成功: 54829 bytes (尝试 1)[0m
+[0;32mI (180033) http_camera: 获取帧: 54829 bytes[0m
+[0;32mI (180033) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 54829[0m
+[0;32mI (180043) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (180163) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (180163) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (180163) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (180173) FIRE_DETECTOR: 输入数据前100字节和: 18389[0m
+[0;32mI (180193) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (180193) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (180193) FIRE_DETECTOR: 预处理耗时: 27490 us (27 ms)[0m
+[0;32mI (180193) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (199403) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19203962 us (19203 ms)[0m
+[0;32mI (199403) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (199403) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (199413) FIRE_DETECTOR: 原始输出: 0, scale: 0.003906, zero: 0, 概率: 0.000000[0m
+[0;32mI (199423) FIRE_DETECTOR: 正常环境(26℃)，阈值 0.6[0m
+[0;32mI (199433) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (199433) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (199443) FIRE_DETECTOR:    预处理: 27490 us (27 ms)[0m
+[0;32mI (199443) FIRE_DETECTOR:    推理: 19203962 us (19203 ms)[0m
+[0;32mI (199453) FIRE_DETECTOR:    总计: 19271894 us (19271 ms)[0m
+[0;32mI (199463) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.00[0m
+[0;32mI (199463) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 1.00, 有火概率: 0.00)[0m
+[0;32mI (199473) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (199483) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (201543) http_camera: 图像大小: 55604 bytes (无分辨率信息)[0m
+[0;32mI (201693) http_camera: JPEG头验证通过[0m
+[0;32mI (201703) http_camera: 帧获取成功: 55604 bytes (尝试 1)[0m
+[0;32mI (201703) http_camera: 获取帧: 55604 bytes[0m
+[0;32mI (201703) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 55604[0m
+[0;32mI (201713) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (201833) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (201833) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (201833) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (201833) FIRE_DETECTOR: 输入数据前100字节和: 19217[0m
+[0;32mI (201853) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (201853) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (201853) FIRE_DETECTOR: 预处理耗时: 27404 us (27 ms)[0m
+[0;32mI (201863) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (221073) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19201392 us (19201 ms)[0m
+[0;32mI (221073) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (221073) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (221083) FIRE_DETECTOR: 原始输出: 0, scale: 0.003906, zero: 0, 概率: 0.000000[0m
+[0;32mI (221083) FIRE_DETECTOR: 正常环境(26℃)，阈值 0.6[0m
+[0;32mI (221093) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (221103) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (221103) FIRE_DETECTOR:    预处理: 27404 us (27 ms)[0m
+[0;32mI (221113) FIRE_DETECTOR:    推理: 19201392 us (19201 ms)[0m
+[0;32mI (221113) FIRE_DETECTOR:    总计: 19269237 us (19269 ms)[0m
+[0;32mI (221123) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.00[0m
+[0;32mI (221133) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 1.00, 有火概率: 0.00)[0m
+[0;32mI (221143) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (221143) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (223303) http_camera: 图像大小: 55676 bytes (无分辨率信息)[0m
+[0;32mI (223463) http_camera: JPEG头验证通过[0m
+[0;32mI (223463) http_camera: 帧获取成功: 55676 bytes (尝试 1)[0m
+[0;32mI (223463) http_camera: 获取帧: 55676 bytes[0m
+[0;32mI (223473) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 55676[0m
+[0;32mI (223473) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (223593) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (223593) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (223593) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (223603) FIRE_DETECTOR: 输入数据前100字节和: 19343[0m
+[0;32mI (223623) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (223623) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (223623) FIRE_DETECTOR: 预处理耗时: 27393 us (27 ms)[0m
+[0;32mI (223633) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (242833) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19202444 us (19202 ms)[0m
+[0;32mI (242833) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (242843) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (242843) FIRE_DETECTOR: 原始输出: 0, scale: 0.003906, zero: 0, 概率: 0.000000[0m
+[0;32mI (242853) FIRE_DETECTOR: 正常环境(26℃)，阈值 0.6[0m
+[0;32mI (242863) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (242863) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (242873) FIRE_DETECTOR:    预处理: 27393 us (27 ms)[0m
+[0;32mI (242873) FIRE_DETECTOR:    推理: 19202444 us (19202 ms)[0m
+[0;32mI (242883) FIRE_DETECTOR:    总计: 19270277 us (19270 ms)[0m
+[0;32mI (242893) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.00[0m
+[0;32mI (242893) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 1.00, 有火概率: 0.00)[0m
+[0;32mI (242903) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (242913) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (244963) http_camera: 图像大小: 55855 bytes (无分辨率信息)[0m
+[0;32mI (245243) http_camera: JPEG头验证通过[0m
+[0;32mI (245243) http_camera: 帧获取成功: 55855 bytes (尝试 1)[0m
+[0;32mI (245243) http_camera: 获取帧: 55855 bytes[0m
+[0;32mI (245243) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 55855[0m
+[0;32mI (245253) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (245373) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (245373) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (245373) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (245383) FIRE_DETECTOR: 输入数据前100字节和: 19593[0m
+[0;32mI (245403) FIRE_DETECTOR: 输入张量地址: 0x3c3e96c0[0m
+[0;32mI (245403) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (245403) FIRE_DETECTOR: 预处理耗时: 27413 us (27 ms)[0m
+[0;32mI (245403) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (264603) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19194844 us (19194 ms)[0m
+[0;32mI (264603) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (264613) FIRE_DETECTOR: 输出张量地址: 0x3c3c4ac0[0m
+[0;32mI (264613) FIRE_DETECTOR: 原始输出: 1, scale: 0.003906, zero: 0, 概率: 0.003906[0m
+[0;32mI (264623) FIRE_DETECTOR: 正常环境(26℃)，阈值 0.6[0m
+[0;32mI (264633) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (264633) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (264643) FIRE_DETECTOR:    预处理: 27413 us (27 ms)[0m
+[0;32mI (264643) FIRE_DETECTOR:    推理: 19194844 us (19194 ms)[0m
+[0;32mI (264653) FIRE_DETECTOR:    总计: 19262712 us (19262 ms)[0m
+[0;32mI (264663) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.00[0m
+[0;32mI (264673) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 1.00, 有火概率: 0.00)[0m
+[0;32mI (264673) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (264683) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;31mE (271693) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (271693) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (271693) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (271693) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (277713) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (277713) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (277713) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (277713) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (283733) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (283733) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (283733) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (283733) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (284743) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (291753) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (291753) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (291753) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (291753) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (297773) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (297773) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (297773) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (297773) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (303793) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (303793) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (303793) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (303793) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (304803) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (311813) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (311813) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (311813) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (311813) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (317833) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (317833) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (317833) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (317833) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (323853) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (323853) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (323853) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (323853) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (324863) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (331873) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (331873) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (331873) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (331873) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (337893) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (337893) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (337893) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (337893) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (343913) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (343913) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (343913) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (343913) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (344923) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (351933) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (351933) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (351933) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (351933) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (357953) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (357953) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (357953) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (357953) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (363973) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (363973) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (363973) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (363973) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (364983) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (371993) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (371993) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (371993) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (371993) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (378013) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (378013) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (378013) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (378013) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (384033) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (384033) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (384033) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (384033) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (385043) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (392053) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (392053) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (392053) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (392053) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (398073) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (398073) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (398073) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (398073) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (404093) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (404093) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (404093) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (404093) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (405103) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (412113) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (412113) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (412113) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (412113) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (418133) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (418133) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (418133) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (418133) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (424153) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (424153) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (424153) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (424153) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (425163) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (432173) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (432173) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (432173) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (432173) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (438193) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (438193) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (438193) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (438193) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (444213) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (444213) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (444213) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (444213) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (445223) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (452233) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (452233) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (452233) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (452233) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (458253) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (458253) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (458253) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (458253) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (464273) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (464273) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (464273) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (464273) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (465283) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (472293) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (472293) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (472293) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (472293) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (478313) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (478313) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (478313) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (478313) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (484333) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (484333) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (484333) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (484333) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (485343) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (492353) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (492353) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (492353) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (492353) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (498373) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (498373) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (498373) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (498373) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (504393) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (504393) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (504393) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (504393) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (505403) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (512413) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (512413) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (512413) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (512413) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (518433) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (518433) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (518433) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (518433) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (524453) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (524453) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (524453) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (524453) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (525463) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (532473) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (532473) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (532473) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (532473) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (538493) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (538493) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (538493) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (538493) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (544513) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (544513) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (544513) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (544513) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (545523) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (552533) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (552533) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (552533) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (552533) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (558553) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (558553) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (558553) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (558553) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (564573) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (564573) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (564573) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (564573) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (565583) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (572593) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (572593) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (572593) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (572593) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (578613) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (578613) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (578613) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (578613) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (584633) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (584633) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (584633) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (584633) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (585643) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (592653) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (592653) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (592653) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (592653) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (598673) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (598673) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (598673) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (598673) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (604693) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (604693) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (604693) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (604693) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (605703) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (612713) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (612713) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (612713) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (612713) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (618733) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (618733) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (618733) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (618733) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (624753) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (624753) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (624753) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (624753) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (625763) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (632773) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (632773) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (632773) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (632773) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (638793) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (638793) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (638793) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (638793) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (644813) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (644813) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (644813) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (644813) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (645823) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (652833) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (652833) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (652833) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (652833) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (658853) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (658853) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (658853) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (658853) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (664873) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (664873) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (664873) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (664873) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (665883) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (672893) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (672893) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (672893) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (672893) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (678913) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (678913) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (678913) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (678913) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (684933) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (684933) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (684933) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (684933) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (685943) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (692953) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (692953) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (692953) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (692953) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (698973) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (698973) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (698973) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (698973) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (704993) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (704993) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (704993) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (704993) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (706003) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (713013) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (713013) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (713013) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (713013) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (719033) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (719033) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (719033) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (719033) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (725053) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (725053) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (725053) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (725053) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (726063) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (733073) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (733073) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (733073) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (733073) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (739093) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (739093) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (739093) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (739093) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (745113) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (745113) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (745113) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (745113) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (746123) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (753133) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (753133) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (753133) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (753133) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (759153) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (759153) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (759153) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (759153) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (765173) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (765173) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (765173) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (765173) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (766183) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (773193) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (773193) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (773193) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (773193) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (779213) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (779213) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (779213) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (779213) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (785233) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (785233) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (785233) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (785233) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (786243) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (793253) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (793253) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (793253) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (793253) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (799273) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (799273) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (799273) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (799273) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (805293) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (805293) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (805293) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (805293) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (806303) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (813313) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (813313) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (813313) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (813313) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (819333) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (819333) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (819333) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (819333) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (825353) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (825353) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (825353) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (825353) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (826363) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (833373) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (833373) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (833373) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (833373) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (839393) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (839393) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (839393) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (839393) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (845413) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (845413) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (845413) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (845413) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (846423) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (853433) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (853433) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (853433) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (853433) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (859453) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (859453) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (859453) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (859453) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (865473) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (865473) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (865473) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (865473) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (866483) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (873493) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (873493) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (873493) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (873493) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (879513) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (879513) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (879513) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (879513) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (885533) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (885533) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (885533) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (885533) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (886543) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (893553) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (893553) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (893553) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (893553) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (899573) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (899573) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (899573) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (899573) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (905593) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (905593) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (905593) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (905593) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (906603) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (913613) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (913613) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (913613) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (913613) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (919633) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (919633) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (919633) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (919633) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (925653) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (925653) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (925653) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (925653) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (926663) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (933673) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (933673) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (933673) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (933673) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (939693) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (939693) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (939693) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (939693) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (945713) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (945713) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (945713) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (945713) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (946723) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (953733) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (953733) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (953733) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (953733) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (959753) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (959753) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (959753) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (959753) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (965773) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (965773) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (965773) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (965773) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (966783) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (973793) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (973793) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (973793) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (973793) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (979813) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (979813) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (979813) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (979813) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (985833) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (985833) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (985833) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (985833) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (986843) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (993853) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (993853) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (993853) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (993853) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (999873) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (999873) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (999873) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (999873) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1005893) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1005893) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1005893) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1005893) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1006903) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (1013913) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1013913) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1013913) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1013913) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1019933) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1019933) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1019933) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1019933) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1025953) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1025953) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1025953) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1025953) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1026963) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (1033973) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1033973) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1033973) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1033973) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1039993) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1039993) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1039993) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1039993) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1046013) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1046013) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1046013) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1046013) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1047023) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (1054033) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1054033) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1054033) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1054033) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1060053) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1060053) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1060053) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1060053) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1066073) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1066073) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1066073) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1066073) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1067083) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;31mE (1074093) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1074093) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1074093) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1074093) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1080113) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1080113) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1080113) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1080113) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1086133) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (1086133) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (1086133) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (1086133) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1087143) http_camera: 连接ESP32-CAM失败，已重试3次[0m

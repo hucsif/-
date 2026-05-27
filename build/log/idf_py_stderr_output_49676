@@ -1,0 +1,299 @@
+[0;33m--- esp-idf-monitor 1.9.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40056f6f: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f162: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f15f: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m171[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f23b: [0;33mesp_nn_div_by_power_of_two[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/common/common_functions.h[0m[0m:[1;31m129[0m
+[0m--- (inlined by) [0;33mesp_nn_multiply_by_quantized_mult[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/common/common_functions.h[0m[0m:[1;31m145[0m
+[0m--- (inlined by) [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m178[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f15a: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f154: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f23b: [0;33mesp_nn_div_by_power_of_two[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/common/common_functions.h[0m[0m:[1;31m129[0m
+[0m--- (inlined by) [0;33mesp_nn_multiply_by_quantized_mult[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/common/common_functions.h[0m[0m:[1;31m145[0m
+[0m--- (inlined by) [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m178[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f15a: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f154: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f154: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f157: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m171[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f157: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m171[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f246: [0;33mesp_nn_div_by_power_of_two[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/common/common_functions.h[0m[0m:[1;31m134[0m
+[0m--- (inlined by) [0;33mesp_nn_multiply_by_quantized_mult[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/common/common_functions.h[0m[0m:[1;31m145[0m
+[0m--- (inlined by) [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m178[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f164: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f151: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m168[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f21d: [0;33mesp_nn_pick_sat_high32_of64[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/common/common_functions.h[0m[0m:[1;31m88[0m
+[0m--- (inlined by) [0;33mesp_nn_sat_round_doubling_high_mul[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/common/common_functions.h[0m[0m:[1;31m107[0m
+[0m--- (inlined by) [0;33mesp_nn_multiply_by_quantized_mult[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/common/common_functions.h[0m[0m:[1;31m144[0m
+[0m--- (inlined by) [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m178[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f15f: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m171[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f162: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f164: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f154: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f154: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f199: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m162[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x42032bf3: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x42033010: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40377b45: [0;33m_xt_lowint1[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f154: [0;33mesp_nn_conv_s8_ansi[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_ansi.c[0m[0m:[1;31m170[0m
+[0m--- 0x4202a9e9: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m424[0m
+[0m--- 0x4201d425: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x420235ae: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4201090e: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e9da: [0;33mfire_detector_run[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/fire_detector.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200f27e: [0;33mprocess_and_detect_fire[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/image_processing.cpp[0m[0m:[1;31m101[0m
+[0m--- 0x4200e730: [0;33mcamera_fetch_task[0m[0m at [0;32m/home/zhu/esp32/smart_surveillance/build/../main/ai_detection/get_image.c[0m[0m:[1;31m176[0m
+[0m--- 0x4038413d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/zhu/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m

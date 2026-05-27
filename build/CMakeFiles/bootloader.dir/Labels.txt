@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/zhu/esp32/smart_surveillance/build/CMakeFiles/bootloader
+/home/zhu/esp32/smart_surveillance/build/CMakeFiles/bootloader.rule
+/home/zhu/esp32/smart_surveillance/build/CMakeFiles/bootloader-complete.rule
+/home/zhu/esp32/smart_surveillance/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/zhu/esp32/smart_surveillance/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/zhu/esp32/smart_surveillance/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/zhu/esp32/smart_surveillance/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/home/zhu/esp32/smart_surveillance/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/zhu/esp32/smart_surveillance/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/zhu/esp32/smart_surveillance/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
