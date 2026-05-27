@@ -1,0 +1,946 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048ede
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (26) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 29 2026 10:36:52[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00500000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=2c72a0h (2912928) map[0m
+[0;32mI (621) esp_image: segment 1: paddr=002d72c8 vaddr=3fca0400 size=05138h ( 20792) load[0m
+[0;32mI (626) esp_image: segment 2: paddr=002dc408 vaddr=40374000 size=03c10h ( 15376) load[0m
+[0;32mI (631) esp_image: segment 3: paddr=002e0020 vaddr=42000020 size=d8edch (888540) map[0m
+[0;32mI (795) esp_image: segment 4: paddr=003b8f04 vaddr=40377c10 size=18700h (100096) load[0m
+[0;32mI (829) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (829) boot: Disabling RNG early entropy source...[0m
+[0;32mI (840) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (841) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (841) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (846) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (851) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (856) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (861) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (867) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (873) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (878) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (885) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (890) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (895) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (900) esp_psram: Speed: 80MHz[0m
+[0;32mI (904) cpu_start: Multicore app[0m
+[0;32mI (1360) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1369) cpu_start: Pro cpu start user code[0m
+[0;32mI (1369) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1369) app_init: Application information:[0m
+[0;32mI (1373) app_init: Project name:     smart_surveillance[0m
+[0;32mI (1378) app_init: App version:      1[0m
+[0;32mI (1383) app_init: Compile time:     Apr 29 2026 10:36:49[0m
+[0;32mI (1389) app_init: ELF file SHA256:  095b651a4...[0m
+[0;32mI (1394) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (1399) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1404) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1409) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1414) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1421) heap_init: At 3FCA6AB0 len 00042C60 (267 KiB): RAM[0m
+[0;32mI (1427) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1433) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1440) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[0;32mI (1446) esp_psram: Adding pool of 8178K of PSRAM memory to heap allocator[0m
+[0;32mI (1454) spi_flash: detected chip: boya[0m
+[0;32mI (1458) spi_flash: flash io: dio[0m
+[0;33mW (1462) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;32mI (1476) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1482) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1490) main_task: Started on CPU0[0m
+[0;32mI (1500) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1500) main_task: Calling app_main()[0m
+[0;32mI (1520) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1530) gpio: GPIO[17]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1530) uart: queue free spaces: 20[0m
+[0;32mI (1540) stm32_uart: UART初始化成功！[0m
+[0;32mI (1540) pp: pp rom version: e7ae62f[0m
+[0;32mI (1550) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1560) wifi:wifi driver task: 3fcb8b00, prio:23, stack:6656, core=0[0m
+[0;32mI (1570) wifi:wifi firmware version: 0caa81945[0m
+[0;32mI (1570) wifi:wifi certification version: v7.0[0m
+[0;32mI (1570) wifi:config NVS flash: enabled[0m
+[0;32mI (1570) wifi:config nano formating: disabled[0m
+[0;32mI (1570) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1580) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1580) wifi:Init management short buffer num: 32[0m
+[0;32mI (1590) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1590) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1590) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1600) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1600) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1610) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1610) wifi_init: rx ba win: 6[0m
+[0;32mI (1610) wifi_init: accept mbox: 6[0m
+[0;32mI (1620) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1620) wifi_init: udp mbox: 6[0m
+[0;32mI (1630) wifi_init: tcp mbox: 6[0m
+[0;32mI (1630) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1630) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1640) wifi_init: tcp mss: 1440[0m
+[0;32mI (1640) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1650) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1650) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1660) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;33mW (1700) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (1790) wifi:mode : sta (9c:13:9e:aa:e2:4c)[0m
+[0;32mI (1790) wifi:enable tsf[0m
+[0;32mI (1790) wifi_manager: wifi初始化完成[0m
+Free heap: 8519376 bytes
+Chip model: esp32s3
+[0;32mI (1810) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:5, snd_ch_cfg:0x0[0m
+[0;32mI (1810) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1840) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2840) wifi:state: assoc -> init (0x2700)[0m
+[0;32mI (2840) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:5, snd_ch_cfg:0x0[0m
+[0;32mI (2840) wifi_manager: connect to the AP fail,retry now[0m
+[0;32mI (5250) wifi_manager: connect to the AP fail,retry now[0m
+[0;32mI (5260) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:5, snd_ch_cfg:0x0[0m
+[0;32mI (5260) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (5260) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (5290) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (5310) wifi:connected with OPPO Reno7 5G, aid = 2, channel 11, BW20, bssid = 5a:dd:53:58:f4:67[0m
+[0;32mI (5310) wifi:security: WPA2-PSK, phy: bgn, rssi: -25[0m
+[0;32mI (5320) wifi:pm start, type: 1[0m
+
+[0;32mI (5320) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (5330) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (5340) wifi_manager: Connected to AP[0m
+[0;32mI (5390) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (5390) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (5620) wifi:<ba-add>idx:0 (ifx:0, 5a:dd:53:58:f4:67), tid:0, ssn:0, winSize:64[0m
+[0;32mI (6840) esp_netif_handlers: sta ip: 192.168.87.37, mask: 255.255.255.0, gw: 192.168.87.72[0m
+[0;32mI (6840) wifi_manager: Get ip address[0m
+[0;32mI (6840) main: wifi connect success[0m
+[0;32mI (8290) WebSocket Server: WebSocket 发送任务启动[0m
+[0;32mI (8290) WebSocket Server: 等待队列数据, client_sockfd=-1[0m
+[0;32mI (8290) stm32_uart: UART 任务启动，运行在核心 1[0m
+[0;32mI (8290) WebSocket Server: HTTP 服务器启动成功[0m
+[0;32mI (8290) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (8300) WebSocket Server: WebSocket 路由注册成功: /ws[0m
+[0;32mI (8300) stm32_uart: 完整数据帧: T27H64L218S0#[0m
+[0;32mI (8310) WebSocket Server: HTTP 路由注册成功: /[0m
+[0;32mI (8320) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (8320) WebSocket Server: 最新帧路由注册成功: /latest_frame[0m
+[0;32mI (8330) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (8330) WebSocket Server: Web 服务器启动成功，端口: 80[0m
+[0;32mI (8340) stm32_uart: 温度(AX): 27[0m
+[0;32mI (8350) http_camera: HTTP Camera initialized[0m
+[0;32mI (8350) stm32_uart: 湿度(AY): 64[0m
+[0;32mI (8360) FIRE_DETECTOR: 初始化火焰分类器...[0m
+[0;32mI (8360) stm32_uart: 光照(AZ): 218[0m
+[0;32mI (8360) FIRE_DETECTOR: 模型数据地址: 0x3c0fe890[0m
+[0;32mI (8370) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (8380) FIRE_DETECTOR: 模型数据大小: 2706528 bytes[0m
+[0;32mI (8380) stm32_uart: ===========================
+[0m
+[0;32mI (8390) FIRE_DETECTOR: 模型数据前16字节:[0m
+[0;32mI (8400) FIRE_DETECTOR: 1c 00 00 00 54 46 4c 33 14 00 20 00 1c 00 18 00 [0m
+[0;32mI (8400) FIRE_DETECTOR: 模型版本: 3[0m
+[0;32mI (8410) FIRE_DETECTOR: Tensor Arena分配成功: 3072 KB[0m
+[0;32mI (8410) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (8420) stm32_uart: 完整数据帧: T27H65L219S0#[0m
+[0;32mI (8430) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (8430) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (8440) stm32_uart: 温度(AX): 27[0m
+[0;32mI (8440) stm32_uart: 湿度(AY): 65[0m
+[0;32mI (8450) stm32_uart: 光照(AZ): 219[0m
+[0;32mI (8450) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (8460) stm32_uart: ===========================
+[0m
+[0;33mW (8410) WebSocket Server: 无客户端连接，丢弃数据[0m
+[0;32mI (8480) WebSocket Server: 等待队列数据, client_sockfd=-1[0m
+[0;33mW (8480) WebSocket Server: 无客户端连接，丢弃数据[0m
+[0;32mI (8480) WebSocket Server: 等待队列数据, client_sockfd=-1[0m
+[0;32mI (8480) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (8500) stm32_uart: 完整数据帧: T27H65L219S0#[0m
+[0;32mI (8500) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (8500) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (8510) stm32_uart: 温度(AX): 27[0m
+[0;32mI (8510) stm32_uart: 湿度(AY): 65[0m
+[0;32mI (8520) stm32_uart: 光照(AZ): 219[0m
+[0;32mI (8520) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (8530) stm32_uart: ===========================
+[0m
+[0;33mW (8540) WebSocket Server: 无客户端连接，丢弃数据[0m
+[0;32mI (8550) WebSocket Server: 等待队列数据, client_sockfd=-1[0m
+[0;32mI (8550) FIRE_DETECTOR: 火焰分类器初始化成功[0m
+[0;32mI (8550) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (8550) FIRE_DETECTOR:   输入: 224 x 224 x 3, 类型: 3[0m
+[0;32mI (8560) stm32_uart: 完整数据帧: T27H65L219S0#[0m
+[0;32mI (8560) FIRE_DETECTOR:   输出: 2 个值, 类型: 3[0m
+[0;32mI (8570) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (8580) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (8580) stm32_uart: 温度(AX): 27[0m
+[0;32mI (8590) stm32_uart: 湿度(AY): 65[0m
+[0;32mI (8590) stm32_uart: 光照(AZ): 219[0m
+[0;32mI (8600) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (8600) stm32_uart: ===========================
+[0m
+[0;33mW (8610) WebSocket Server: 无客户端连接，丢弃数据[0m
+[0;32mI (8610) WebSocket Server: 等待队列数据, client_sockfd=-1[0m
+[0;32mI (8640) http_camera: 图像大小: 76345 bytes (无分辨率信息)[0m
+[0;32mI (9020) http_camera: JPEG头验证通过[0m
+[0;32mI (9030) http_camera: 帧获取成功: 76345 bytes (尝试 1)[0m
+[0;32mI (9030) http_camera: 获取帧: 76345 bytes[0m
+[0;32mI (9030) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 76345[0m
+[0;32mI (9040) IMAGE_PROC: RGB缓冲区分配成功: 147 KB[0m
+[0;32mI (9040) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (9170) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (9180) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (9180) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (9180) FIRE_DETECTOR: 输入数据前100字节和: 2177[0m
+[0;32mI (9200) FIRE_DETECTOR: 输入张量地址: 0x3c3e9670[0m
+[0;32mI (9200) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (9200) FIRE_DETECTOR: 预处理耗时: 26755 us (26 ms)[0m
+[0;32mI (9210) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (10140) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (10140) stm32_uart: 完整数据帧: T27H65L219S0#[0m
+[0;32mI (10140) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (10150) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (10150) stm32_uart: 温度(AX): 27[0m
+[0;32mI (10160) stm32_uart: 湿度(AY): 65[0m
+[0;32mI (10160) stm32_uart: 光照(AZ): 219[0m
+[0;32mI (10170) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (10170) stm32_uart: ===========================
+[0m
+[0;33mW (10190) WebSocket Server: 无客户端连接，丢弃数据[0m
+[0;32mI (10190) WebSocket Server: 等待队列数据, client_sockfd=-1[0m
+[0;32mI (12280) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (12280) stm32_uart: 完整数据帧: T27H65L219S0#[0m
+[0;32mI (12280) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (12290) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (12290) stm32_uart: 温度(AX): 27[0m
+[0;32mI (12300) stm32_uart: 湿度(AY): 65[0m
+[0;32mI (12300) stm32_uart: 光照(AZ): 219[0m
+[0;32mI (12300) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (12310) stm32_uart: ===========================
+[0m
+[0;33mW (12330) WebSocket Server: 无客户端连接，丢弃数据[0m
+[0;32mI (12330) WebSocket Server: 等待队列数据, client_sockfd=-1[0m
+[0;32mI (14420) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (14420) stm32_uart: 完整数据帧: T27H65L219S0#[0m
+[0;32mI (14420) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (14430) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (14430) stm32_uart: 温度(AX): 27[0m
+[0;32mI (14440) stm32_uart: 湿度(AY): 65[0m
+[0;32mI (14440) stm32_uart: 光照(AZ): 219[0m
+[0;32mI (14440) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (14450) stm32_uart: ===========================
+[0m
+[0;33mW (14470) WebSocket Server: 无客户端连接，丢弃数据[0m
+[0;32mI (14470) WebSocket Server: 等待队列数据, client_sockfd=-1[0m
+[0;32mI (15990) WebSocket Server: 收到 HTTP 请求: /[0m
+[0;32mI (16070) WebSocket Server: HTML 页面发送成功 (10476 字节)[0m
+[0;32mI (16490) WebSocket Server: 握手结束，新连接已建立[0m
+[0;32mI (16490) WebSocket Server: Save client_fds:58[0m
+[0;32mI (16550) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (16550) stm32_uart: 完整数据帧: T27H65L220S0#[0m
+[0;32mI (16560) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (16560) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (16570) stm32_uart: 温度(AX): 27[0m
+[0;32mI (16570) stm32_uart: 湿度(AY): 65[0m
+[0;32mI (16570) stm32_uart: 光照(AZ): 220[0m
+[0;32mI (16580) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (16580) stm32_uart: ===========================
+[0m
+[0;32mI (16620) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (18160) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (18160) stm32_uart: 完整数据帧: T27H65L201S0#[0m
+[0;32mI (18160) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (18160) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (18170) stm32_uart: 温度(AX): 27[0m
+[0;32mI (18170) stm32_uart: 湿度(AY): 65[0m
+[0;32mI (18180) stm32_uart: 光照(AZ): 201[0m
+[0;32mI (18180) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (18190) stm32_uart: ===========================
+[0m
+[0;32mI (18210) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (20300) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (20300) stm32_uart: 完整数据帧: T27H66L219S0#[0m
+[0;32mI (20300) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (20310) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (20310) stm32_uart: 温度(AX): 27[0m
+[0;32mI (20320) stm32_uart: 湿度(AY): 66[0m
+[0;32mI (20320) stm32_uart: 光照(AZ): 219[0m
+[0;32mI (20320) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (20330) stm32_uart: ===========================
+[0m
+[0;32mI (20360) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (22430) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (22430) stm32_uart: 完整数据帧: T27H66L50S0#[0m
+[0;32mI (22430) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (22440) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (22440) stm32_uart: 温度(AX): 27[0m
+[0;32mI (22450) stm32_uart: 湿度(AY): 66[0m
+[0;32mI (22450) stm32_uart: 光照(AZ): 50[0m
+[0;32mI (22460) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (22460) stm32_uart: ===========================
+[0m
+[0;32mI (22480) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (24580) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (24580) stm32_uart: 完整数据帧: T27H66L50S0#[0m
+[0;32mI (24580) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (24590) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (24590) stm32_uart: 温度(AX): 27[0m
+[0;32mI (24600) stm32_uart: 湿度(AY): 66[0m
+[0;32mI (24600) stm32_uart: 光照(AZ): 50[0m
+[0;32mI (24600) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (24610) stm32_uart: ===========================
+[0m
+[0;32mI (24630) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (26180) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (26180) stm32_uart: 完整数据帧: T27H66L48S0#[0m
+[0;32mI (26180) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (26190) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (26190) stm32_uart: 温度(AX): 27[0m
+[0;32mI (26200) stm32_uart: 湿度(AY): 66[0m
+[0;32mI (26200) stm32_uart: 光照(AZ): 48[0m
+[0;32mI (26200) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (26210) stm32_uart: ===========================
+[0m
+[0;32mI (26240) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (28310) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (28310) stm32_uart: 完整数据帧: T27H65L48S0#[0m
+[0;32mI (28310) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (28320) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (28320) stm32_uart: 温度(AX): 27[0m
+[0;32mI (28330) stm32_uart: 湿度(AY): 65[0m
+[0;32mI (28330) stm32_uart: 光照(AZ): 48[0m
+[0;32mI (28340) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (28340) stm32_uart: ===========================
+[0m
+[0;32mI (28380) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (28550) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19339770 us (19339 ms)[0m
+[0;32mI (28550) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (28560) FIRE_DETECTOR: 输出张量地址: 0x3c3c4a70[0m
+[0;32mI (28560) FIRE_DETECTOR: 原始输出: 0, scale: 0.003906, zero: 0, 概率: 0.000000[0m
+[0;32mI (28570) FIRE_DETECTOR: 正常环境(27℃)，阈值 0.6[0m
+[0;32mI (28580) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (28580) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (28590) FIRE_DETECTOR:    预处理: 26755 us (26 ms)[0m
+[0;32mI (28590) FIRE_DETECTOR:    推理: 19339770 us (19339 ms)[0m
+[0;32mI (28600) FIRE_DETECTOR:    总计: 19406033 us (19406 ms)[0m
+[0;32mI (28610) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.00[0m
+[0;32mI (28610) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 1.00, 有火概率: 0.00)[0m
+[0;32mI (30450) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (30450) stm32_uart: 完整数据帧: T27H65L48S0#[0m
+[0;32mI (30450) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (30460) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (30460) stm32_uart: 温度(AX): 27[0m
+[0;32mI (30470) stm32_uart: 湿度(AY): 65[0m
+[0;32mI (30470) stm32_uart: 光照(AZ): 48[0m
+[0;32mI (30470) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (30480) stm32_uart: ===========================
+[0m
+[0;32mI (30490) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (30660) http_camera: 图像大小: 85977 bytes (无分辨率信息)[0m
+[0;32mI (31070) http_camera: JPEG头验证通过[0m
+[0;32mI (31070) http_camera: 帧获取成功: 85977 bytes (尝试 1)[0m
+[0;32mI (31070) http_camera: 获取帧: 85977 bytes[0m
+[0;32mI (31080) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 85977[0m
+[0;32mI (31080) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (31220) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (31220) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (31220) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (31230) FIRE_DETECTOR: 输入数据前100字节和: 8596[0m
+[0;32mI (31250) FIRE_DETECTOR: 输入张量地址: 0x3c3e9670[0m
+[0;32mI (31250) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (31250) FIRE_DETECTOR: 预处理耗时: 26970 us (26 ms)[0m
+[0;32mI (31250) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (32590) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (32590) stm32_uart: 完整数据帧: T27H64L48S0#[0m
+[0;32mI (32590) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (32600) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (32600) stm32_uart: 温度(AX): 27[0m
+[0;32mI (32610) stm32_uart: 湿度(AY): 64[0m
+[0;32mI (32610) stm32_uart: 光照(AZ): 48[0m
+[0;32mI (32610) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (32620) stm32_uart: ===========================
+[0m
+[0;32mI (32650) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (34190) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (34190) stm32_uart: 完整数据帧: T27H64L48S0#[0m
+[0;32mI (34190) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (34200) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (34200) stm32_uart: 温度(AX): 27[0m
+[0;32mI (34200) stm32_uart: 湿度(AY): 64[0m
+[0;32mI (34210) stm32_uart: 光照(AZ): 48[0m
+[0;32mI (34210) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (34220) stm32_uart: ===========================
+[0m
+[0;32mI (34230) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (36330) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (36330) stm32_uart: 完整数据帧: T27H64L49S0#[0m
+[0;32mI (36330) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (36340) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (36340) stm32_uart: 温度(AX): 27[0m
+[0;32mI (36350) stm32_uart: 湿度(AY): 64[0m
+[0;32mI (36350) stm32_uart: 光照(AZ): 49[0m
+[0;32mI (36350) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (36360) stm32_uart: ===========================
+[0m
+[0;32mI (36380) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (38470) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (38470) stm32_uart: 完整数据帧: T27H63L49S0#[0m
+[0;32mI (38470) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (38480) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (38480) stm32_uart: 温度(AX): 27[0m
+[0;32mI (38490) stm32_uart: 湿度(AY): 63[0m
+[0;32mI (38490) stm32_uart: 光照(AZ): 49[0m
+[0;32mI (38490) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (38500) stm32_uart: ===========================
+[0m
+[0;32mI (38520) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (40610) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (40610) stm32_uart: 完整数据帧: T27H63L62S0#[0m
+[0;32mI (40610) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (40620) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (40620) stm32_uart: 温度(AX): 27[0m
+[0;32mI (40630) stm32_uart: 湿度(AY): 63[0m
+[0;32mI (40630) stm32_uart: 光照(AZ): 62[0m
+[0;32mI (40630) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (40640) stm32_uart: ===========================
+[0m
+[0;32mI (40680) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (42210) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (42210) stm32_uart: 完整数据帧: T27H63L60S0#[0m
+[0;32mI (42210) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (42220) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (42220) stm32_uart: 温度(AX): 27[0m
+[0;32mI (42230) stm32_uart: 湿度(AY): 63[0m
+[0;32mI (42230) stm32_uart: 光照(AZ): 60[0m
+[0;32mI (42230) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (42240) stm32_uart: ===========================
+[0m
+[0;32mI (42250) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (44340) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (44350) stm32_uart: 完整数据帧: T27H63L52S0#[0m
+[0;32mI (44350) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (44350) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (44360) stm32_uart: 温度(AX): 27[0m
+[0;32mI (44360) stm32_uart: 湿度(AY): 63[0m
+[0;32mI (44360) stm32_uart: 光照(AZ): 52[0m
+[0;32mI (44370) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (44370) stm32_uart: ===========================
+[0m
+[0;32mI (44390) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (46490) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (46490) stm32_uart: 完整数据帧: T27H62L49S0#[0m
+[0;32mI (46490) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (46500) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (46500) stm32_uart: 温度(AX): 27[0m
+[0;32mI (46510) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (46510) stm32_uart: 光照(AZ): 49[0m
+[0;32mI (46510) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (46520) stm32_uart: ===========================
+[0m
+[0;32mI (46540) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (48620) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (48620) stm32_uart: 完整数据帧: T27H62L46S0#[0m
+[0;32mI (48620) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (48630) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (48630) stm32_uart: 温度(AX): 27[0m
+[0;32mI (48640) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (48640) stm32_uart: 光照(AZ): 46[0m
+[0;32mI (48650) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (48650) stm32_uart: ===========================
+[0m
+[0;32mI (48680) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (50230) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (50230) stm32_uart: 完整数据帧: T27H62L47S0#[0m
+[0;32mI (50230) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (50230) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (50240) stm32_uart: 温度(AX): 27[0m
+[0;32mI (50240) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (50250) stm32_uart: 光照(AZ): 47[0m
+[0;32mI (50250) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (50260) stm32_uart: ===========================
+[0m
+[0;32mI (50290) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (50580) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19324696 us (19324 ms)[0m
+[0;32mI (50580) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (50590) FIRE_DETECTOR: 输出张量地址: 0x3c3c4a70[0m
+[0;32mI (50590) FIRE_DETECTOR: 原始输出: 251, scale: 0.003906, zero: 0, 概率: 0.980469[0m
+[0;32mI (50600) FIRE_DETECTOR: 正常环境(27℃)，阈值 0.6[0m
+[0;32mI (50610) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (50610) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (50620) FIRE_DETECTOR:    预处理: 26970 us (26 ms)[0m
+[0;32mI (50620) FIRE_DETECTOR:    推理: 19324696 us (19324 ms)[0m
+[0;32mI (50630) FIRE_DETECTOR:    总计: 19391651 us (19391 ms)[0m
+[0;32mI (50640) WebSocket Server: 火焰告警已发送: detected=1, confidence=0.98[0m
+[0;32mI (50640) IMAGE_PROC: 🔥 检测到火焰! 置信度: 0.98[0m
+[0;32mI (50650) http_camera: 🔥 检测到火焰! (第 2 帧, 累计 1 次)[0m
+[0;32mI (50660) WebSocket Server: 火焰告警已发送: detected=1, confidence=0.98[0m
+[0;32mI (50670) stm32_uart: 发送指令: 0x01[0m
+[0;32mI (50670) stm32_uart: 发送蜂鸣器开启指令[0m
+[0;32mI (50680) http_camera: 蜂鸣器开启 - 火焰:1 光照:47 lux 湿度:62%[0m
+[0;32mI (52370) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (52370) stm32_uart: 完整数据帧: T27H62L207S1#[0m
+[0;32mI (52370) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (52380) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (52380) stm32_uart: 温度(AX): 27[0m
+[0;32mI (52390) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (52390) stm32_uart: 光照(AZ): 207[0m
+[0;32mI (52390) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (52400) stm32_uart: ===========================
+[0m
+[0;32mI (52410) stm32_uart: 发送指令: 0x01[0m
+[0;32mI (52410) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (52410) stm32_uart: 发送蜂鸣器开启指令[0m
+[0;32mI (52420) stm32_uart: 蜂鸣器开启 - 火焰:1 光照:207 lux 湿度:62%[0m
+[0;32mI (53120) http_camera: 图像大小: 58514 bytes (无分辨率信息)[0m
+[0;32mI (53270) http_camera: JPEG头验证通过[0m
+[0;32mI (53270) http_camera: 帧获取成功: 58514 bytes (尝试 1)[0m
+[0;32mI (53270) http_camera: 获取帧: 58514 bytes[0m
+[0;32mI (53280) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 58514[0m
+[0;32mI (53290) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (53400) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (53410) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (53410) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (53410) FIRE_DETECTOR: 输入数据前100字节和: 11377[0m
+[0;32mI (53430) FIRE_DETECTOR: 输入张量地址: 0x3c3e9670[0m
+[0;32mI (53430) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (53430) FIRE_DETECTOR: 预处理耗时: 27061 us (27 ms)[0m
+[0;32mI (53440) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (54500) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (54500) stm32_uart: 完整数据帧: T27H62L206S1#[0m
+[0;32mI (54500) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (54510) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (54510) stm32_uart: 温度(AX): 27[0m
+[0;32mI (54520) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (54520) stm32_uart: 光照(AZ): 206[0m
+[0;32mI (54530) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (54530) stm32_uart: ===========================
+[0m
+[0;32mI (54560) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (56650) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (56650) stm32_uart: 完整数据帧: T27H62L89S1#[0m
+[0;32mI (56650) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (56660) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (56660) stm32_uart: 温度(AX): 27[0m
+[0;32mI (56670) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (56670) stm32_uart: 光照(AZ): 89[0m
+[0;32mI (56670) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (56680) stm32_uart: ===========================
+[0m
+[0;32mI (56690) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (58250) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (58250) stm32_uart: 完整数据帧: T27H62L23S1#[0m
+[0;32mI (58250) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (58250) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (58260) stm32_uart: 温度(AX): 27[0m
+[0;32mI (58260) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (58270) stm32_uart: 光照(AZ): 23[0m
+[0;32mI (58270) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (58280) stm32_uart: ===========================
+[0m
+[0;32mI (58290) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (60390) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (60390) stm32_uart: 完整数据帧: T27H62L23S1#[0m
+[0;32mI (60390) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (60400) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (60400) stm32_uart: 温度(AX): 27[0m
+[0;32mI (60410) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (60410) stm32_uart: 光照(AZ): 23[0m
+[0;32mI (60410) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (60420) stm32_uart: ===========================
+[0m
+[0;32mI (60440) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (62530) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (62530) stm32_uart: 完整数据帧: T27H62L22S1#[0m
+[0;32mI (62530) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (62540) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (62540) stm32_uart: 温度(AX): 27[0m
+[0;32mI (62550) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (62550) stm32_uart: 光照(AZ): 22[0m
+[0;32mI (62550) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (62560) stm32_uart: ===========================
+[0m
+[0;32mI (62600) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (64130) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (64130) stm32_uart: 完整数据帧: T27H62L22S1#[0m
+[0;32mI (64130) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (64140) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (64140) stm32_uart: 温度(AX): 27[0m
+[0;32mI (64150) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (64150) stm32_uart: 光照(AZ): 22[0m
+[0;32mI (64150) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (64160) stm32_uart: ===========================
+[0m
+[0;32mI (64190) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (66270) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (66270) stm32_uart: 完整数据帧: T27H62L21S1#[0m
+[0;32mI (66270) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (66280) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (66280) stm32_uart: 温度(AX): 27[0m
+[0;32mI (66290) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (66290) stm32_uart: 光照(AZ): 21[0m
+[0;32mI (66290) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (66300) stm32_uart: ===========================
+[0m
+[0;32mI (66330) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (68400) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (68410) stm32_uart: 完整数据帧: T27H61L21S1#[0m
+[0;32mI (68410) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (68410) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (68420) stm32_uart: 温度(AX): 27[0m
+[0;32mI (68420) stm32_uart: 湿度(AY): 61[0m
+[0;32mI (68420) stm32_uart: 光照(AZ): 21[0m
+[0;32mI (68430) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (68430) stm32_uart: ===========================
+[0m
+[0;32mI (68460) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (70550) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (70550) stm32_uart: 完整数据帧: T27H62L21S1#[0m
+[0;32mI (70550) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (70560) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (70560) stm32_uart: 温度(AX): 27[0m
+[0;32mI (70570) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (70570) stm32_uart: 光照(AZ): 21[0m
+[0;32mI (70570) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (70580) stm32_uart: ===========================
+[0m
+[0;32mI (70610) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (72150) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (72150) stm32_uart: 完整数据帧: T27H62L21S1#[0m
+[0;32mI (72150) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (72160) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (72160) stm32_uart: 温度(AX): 27[0m
+[0;32mI (72170) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (72170) stm32_uart: 光照(AZ): 21[0m
+[0;32mI (72170) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (72180) stm32_uart: ===========================
+[0m
+[0;32mI (72220) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (72400) wifi:<ba-add>idx:1 (ifx:0, 5a:dd:53:58:f4:67), tid:6, ssn:2, winSize:64[0m
+[0;32mI (72770) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19329965 us (19329 ms)[0m
+[0;32mI (72770) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (72780) FIRE_DETECTOR: 输出张量地址: 0x3c3c4a70[0m
+[0;32mI (72780) FIRE_DETECTOR: 原始输出: 31, scale: 0.003906, zero: 0, 概率: 0.121094[0m
+[0;32mI (72790) FIRE_DETECTOR: 正常环境(27℃)，阈值 0.6[0m
+[0;32mI (72800) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (72800) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (72810) FIRE_DETECTOR:    预处理: 27061 us (27 ms)[0m
+[0;32mI (72810) FIRE_DETECTOR:    推理: 19329965 us (19329 ms)[0m
+[0;32mI (72820) FIRE_DETECTOR:    总计: 19396923 us (19396 ms)[0m
+[0;32mI (72830) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.12[0m
+[0;32mI (72830) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 0.88, 有火概率: 0.12)[0m
+[0;32mI (72840) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (72850) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (72850) http_camera: 蜂鸣器关闭 - 所有条件已恢复正常[0m
+[0;32mI (74290) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (74290) stm32_uart: 完整数据帧: T27H62L21S0#[0m
+[0;32mI (74290) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (74300) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (74300) stm32_uart: 温度(AX): 27[0m
+[0;32mI (74310) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (74310) stm32_uart: 光照(AZ): 21[0m
+[0;32mI (74310) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (74320) stm32_uart: ===========================
+[0m
+[0;32mI (74320) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (74330) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (74330) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (74340) stm32_uart: 蜂鸣器关闭 - 所有条件已恢复正常[0m
+[0;32mI (74920) http_camera: 图像大小: 51456 bytes (无分辨率信息)[0m
+[0;32mI (75050) http_camera: JPEG头验证通过[0m
+[0;32mI (75050) http_camera: 帧获取成功: 51456 bytes (尝试 1)[0m
+[0;32mI (75050) http_camera: 获取帧: 51456 bytes[0m
+[0;32mI (75050) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 51456[0m
+[0;32mI (75060) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (75180) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (75180) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (75180) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (75180) FIRE_DETECTOR: 输入数据前100字节和: 11026[0m
+[0;32mI (75200) FIRE_DETECTOR: 输入张量地址: 0x3c3e9670[0m
+[0;32mI (75200) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (75200) FIRE_DETECTOR: 预处理耗时: 27055 us (27 ms)[0m
+[0;32mI (75210) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (76420) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (76420) stm32_uart: 完整数据帧: T27H62L214S0#[0m
+[0;32mI (76430) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (76430) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (76440) stm32_uart: 温度(AX): 27[0m
+[0;32mI (76440) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (76440) stm32_uart: 光照(AZ): 214[0m
+[0;32mI (76450) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (76450) stm32_uart: ===========================
+[0m
+[0;32mI (76490) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (78570) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (78570) stm32_uart: 完整数据帧: T27H62L217S0#[0m
+[0;32mI (78570) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (78580) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (78580) stm32_uart: 温度(AX): 27[0m
+[0;32mI (78590) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (78590) stm32_uart: 光照(AZ): 217[0m
+[0;32mI (78590) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (78600) stm32_uart: ===========================
+[0m
+[0;32mI (78640) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (80170) stm32_uart: 接收到的数据大小: 14[0m
+[0;32mI (80170) stm32_uart: 完整数据帧: T27H62L1318S0#[0m
+[0;32mI (80170) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (80180) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (80180) stm32_uart: 温度(AX): 27[0m
+[0;32mI (80190) stm32_uart: 湿度(AY): 62[0m
+[0;32mI (80190) stm32_uart: 光照(AZ): 1318[0m
+[0;32mI (80190) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (80200) stm32_uart: ===========================
+[0m
+[0;32mI (80230) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (82310) stm32_uart: 接收到的数据大小: 14[0m
+[0;32mI (82310) stm32_uart: 完整数据帧: T27H61L6381S0#[0m
+[0;32mI (82310) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (82320) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (82320) stm32_uart: 温度(AX): 27[0m
+[0;32mI (82330) stm32_uart: 湿度(AY): 61[0m
+[0;32mI (82330) stm32_uart: 光照(AZ): 6381[0m
+[0;32mI (82330) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (82340) stm32_uart: ===========================
+[0m
+[0;32mI (82350) stm32_uart: 发送指令: 0x01[0m
+[0;32mI (82350) stm32_uart: 发送蜂鸣器开启指令[0m
+[0;32mI (82360) stm32_uart: 蜂鸣器开启 - 火焰:0 光照:6381 lux 湿度:61%[0m
+[0;32mI (82390) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (84440) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (84450) stm32_uart: 完整数据帧: T27H61L86S1#[0m
+[0;32mI (84450) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (84450) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (84460) stm32_uart: 温度(AX): 27[0m
+[0;32mI (84460) stm32_uart: 湿度(AY): 61[0m
+[0;32mI (84460) stm32_uart: 光照(AZ): 86[0m
+[0;32mI (84470) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (84470) stm32_uart: ===========================
+[0m
+[0;32mI (84480) stm32_uart: 发送指令: 0x00[0m
+[0;32mI (84480) stm32_uart: 发送蜂鸣器关闭指令[0m
+[0;32mI (84490) stm32_uart: 蜂鸣器关闭 - 所有条件已恢复正常[0m
+[0;32mI (84510) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (86580) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (86580) stm32_uart: 完整数据帧: T27H61L228S0#[0m
+[0;32mI (86580) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (86590) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (86590) stm32_uart: 温度(AX): 27[0m
+[0;32mI (86600) stm32_uart: 湿度(AY): 61[0m
+[0;32mI (86600) stm32_uart: 光照(AZ): 228[0m
+[0;32mI (86610) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (86610) stm32_uart: ===========================
+[0m
+[0;32mI (86650) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (88190) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (88190) stm32_uart: 完整数据帧: T27H61L273S0#[0m
+[0;32mI (88190) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (88190) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (88200) stm32_uart: 温度(AX): 27[0m
+[0;32mI (88200) stm32_uart: 湿度(AY): 61[0m
+[0;32mI (88210) stm32_uart: 光照(AZ): 273[0m
+[0;32mI (88210) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (88220) stm32_uart: ===========================
+[0m
+[0;32mI (88230) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (90330) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (90330) stm32_uart: 完整数据帧: T27H60L63S0#[0m
+[0;32mI (90330) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (90340) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (90340) stm32_uart: 温度(AX): 27[0m
+[0;32mI (90350) stm32_uart: 湿度(AY): 60[0m
+[0;32mI (90350) stm32_uart: 光照(AZ): 63[0m
+[0;32mI (90350) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (90360) stm32_uart: ===========================
+[0m
+[0;32mI (90380) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (92460) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (92460) stm32_uart: 完整数据帧: T27H69L15S0#[0m
+[0;32mI (92460) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (92470) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (92470) stm32_uart: 温度(AX): 27[0m
+[0;32mI (92480) stm32_uart: 湿度(AY): 69[0m
+[0;32mI (92480) stm32_uart: 光照(AZ): 15[0m
+[0;32mI (92490) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (92490) stm32_uart: ===========================
+[0m
+[0;32mI (92530) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (94570) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19355640 us (19355 ms)[0m
+[0;32mI (94570) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (94570) FIRE_DETECTOR: 输出张量地址: 0x3c3c4a70[0m
+[0;32mI (94580) FIRE_DETECTOR: 原始输出: 0, scale: 0.003906, zero: 0, 概率: 0.000000[0m
+[0;32mI (94590) FIRE_DETECTOR: 正常环境(27℃)，阈值 0.6[0m
+[0;32mI (94590) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (94600) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (94610) FIRE_DETECTOR:    预处理: 27055 us (27 ms)[0m
+[0;32mI (94610) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (94610) FIRE_DETECTOR:    推理: 19355640 us (19355 ms)[0m
+[0;32mI (94620) stm32_uart: 完整数据帧: T28H75L33S0#[0m
+[0;32mI (94620) FIRE_DETECTOR:    总计: 19422510 us (19422 ms)[0m
+[0;32mI (94630) stm32_uart: 蜂鸣器状态: 0 (关闭)[0m
+[0;32mI (94640) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.00[0m
+[0;32mI (94640) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (94650) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 1.00, 有火概率: 0.00)[0m
+[0;32mI (94650) stm32_uart: 温度(AX): 28[0m
+[0;32mI (94660) stm32_uart: 发送指令: 0x01[0m
+[0;32mI (94670) stm32_uart: 湿度(AY): 75[0m
+[0;32mI (94670) stm32_uart: 发送蜂鸣器开启指令[0m
+[0;32mI (94670) stm32_uart: 光照(AZ): 33[0m
+[0;32mI (94680) http_camera: 蜂鸣器开启 - 火焰:0 光照:33 lux 湿度:75%[0m
+[0;32mI (94680) stm32_uart: 蜂鸣器状态(GX): 0 (关闭)[0m
+[0;32mI (94700) stm32_uart: ===========================
+[0m
+[0;32mI (94700) stm32_uart: 发送指令: 0x01[0m
+[0;32mI (94700) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (94710) stm32_uart: 发送蜂鸣器开启指令[0m
+[0;32mI (94720) stm32_uart: 蜂鸣器开启 - 火焰:0 光照:33 lux 湿度:75%[0m
+[0;32mI (96200) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (96200) stm32_uart: 完整数据帧: T28H79L221S1#[0m
+[0;32mI (96200) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (96210) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (96220) stm32_uart: 温度(AX): 28[0m
+[0;32mI (96220) stm32_uart: 湿度(AY): 79[0m
+[0;32mI (96220) stm32_uart: 光照(AZ): 221[0m
+[0;32mI (96230) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (96230) stm32_uart: ===========================
+[0m
+[0;32mI (96240) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (96750) http_camera: 图像大小: 56532 bytes (无分辨率信息)[0m
+[0;32mI (96970) http_camera: JPEG头验证通过[0m
+[0;32mI (96970) http_camera: 帧获取成功: 56532 bytes (尝试 1)[0m
+[0;32mI (96970) http_camera: 获取帧: 56532 bytes[0m
+[0;32mI (96970) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 56532[0m
+[0;32mI (96980) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (97100) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (97100) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (97100) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (97110) FIRE_DETECTOR: 输入数据前100字节和: 11620[0m
+[0;32mI (97130) FIRE_DETECTOR: 输入张量地址: 0x3c3e9670[0m
+[0;32mI (97130) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (97130) FIRE_DETECTOR: 预处理耗时: 27064 us (27 ms)[0m
+[0;32mI (97130) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (98350) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (98350) stm32_uart: 完整数据帧: T28H83L141S1#[0m
+[0;32mI (98350) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (98360) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (98360) stm32_uart: 温度(AX): 28[0m
+[0;32mI (98370) stm32_uart: 湿度(AY): 83[0m
+[0;32mI (98370) stm32_uart: 光照(AZ): 141[0m
+[0;32mI (98370) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (98380) stm32_uart: ===========================
+[0m
+[0;32mI (98420) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (100480) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (100480) stm32_uart: 完整数据帧: T28H84L138S1#[0m
+[0;32mI (100480) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (100490) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (100490) stm32_uart: 温度(AX): 28[0m
+[0;32mI (100500) stm32_uart: 湿度(AY): 84[0m
+[0;32mI (100500) stm32_uart: 光照(AZ): 138[0m
+[0;32mI (100500) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (100510) stm32_uart: ===========================
+[0m
+[0;32mI (100530) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (102620) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (102620) stm32_uart: 完整数据帧: T28H83L138S1#[0m
+[0;32mI (102620) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (102630) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (102630) stm32_uart: 温度(AX): 28[0m
+[0;32mI (102640) stm32_uart: 湿度(AY): 83[0m
+[0;32mI (102640) stm32_uart: 光照(AZ): 138[0m
+[0;32mI (102640) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (102650) stm32_uart: ===========================
+[0m
+[0;32mI (102670) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (104220) stm32_uart: 接收到的数据大小: 13[0m
+[0;32mI (104220) stm32_uart: 完整数据帧: T28H82L137S1#[0m
+[0;32mI (104220) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (104230) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (104230) stm32_uart: 温度(AX): 28[0m
+[0;32mI (104240) stm32_uart: 湿度(AY): 82[0m
+[0;32mI (104240) stm32_uart: 光照(AZ): 137[0m
+[0;32mI (104250) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (104250) stm32_uart: ===========================
+[0m
+[0;32mI (104270) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (106360) stm32_uart: 接收到的数据大小: 12[0m
+[0;32mI (106360) stm32_uart: 完整数据帧: T28H80L18S1#[0m
+[0;32mI (106360) stm32_uart: 蜂鸣器状态: 1 (开启)[0m
+[0;32mI (106370) stm32_uart: === STM32 Sensor Data ===[0m
+[0;32mI (106370) stm32_uart: 温度(AX): 28[0m
+[0;32mI (106380) stm32_uart: 湿度(AY): 80[0m
+[0;32mI (106380) stm32_uart: 光照(AZ): 18[0m
+[0;32mI (106380) stm32_uart: 蜂鸣器状态(GX): 1 (开启)[0m
+[0;32mI (106390) stm32_uart: ===========================
+[0m
+[0;32mI (106430) WebSocket Server: 等待队列数据, client_sockfd=58[0m
+[0;32mI (116440) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19297976 us (19297 ms)[0m
+[0;32mI (116440) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (116440) FIRE_DETECTOR: 输出张量地址: 0x3c3c4a70[0m
+[0;32mI (116440) FIRE_DETECTOR: 原始输出: 81, scale: 0.003906, zero: 0, 概率: 0.316406[0m
+[0;32mI (116450) FIRE_DETECTOR: 正常环境(28℃)，阈值 0.6[0m
+[0;32mI (116460) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (116470) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (116470) FIRE_DETECTOR:    预处理: 27064 us (27 ms)[0m
+[0;32mI (116480) FIRE_DETECTOR:    推理: 19297976 us (19297 ms)[0m
+[0;32mI (116480) FIRE_DETECTOR:    总计: 19365469 us (19365 ms)[0m
+[0;32mI (116490) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.32[0m
+[0;32mI (116500) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 0.68, 有火概率: 0.32)[0m
+[0;32mI (118580) http_camera: 图像大小: 62109 bytes (无分辨率信息)[0m
+[0;32mI (118790) http_camera: JPEG头验证通过[0m
+[0;32mI (118790) http_camera: 帧获取成功: 62109 bytes (尝试 1)[0m
+[0;32mI (118790) http_camera: 获取帧: 62109 bytes[0m
+[0;32mI (118800) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 62109[0m
+[0;32mI (118800) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (118930) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (118930) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (118930) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (118930) FIRE_DETECTOR: 输入数据前100字节和: 10757[0m
+[0;32mI (118950) FIRE_DETECTOR: 输入张量地址: 0x3c3e9670[0m
+[0;32mI (118950) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (118950) FIRE_DETECTOR: 预处理耗时: 27468 us (27 ms)[0m
+[0;32mI (118960) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (138200) FIRE_DETECTOR: 推理完成, 状态: 0, 推理耗时: 19234630 us (19234 ms)[0m
+[0;32mI (138200) FIRE_DETECTOR: 输出类型: 3[0m
+[0;32mI (138200) FIRE_DETECTOR: 输出张量地址: 0x3c3c4a70[0m
+[0;32mI (138210) FIRE_DETECTOR: 原始输出: 19, scale: 0.003906, zero: 0, 概率: 0.074219[0m
+[0;32mI (138220) FIRE_DETECTOR: 正常环境(28℃)，阈值 0.6[0m
+[0;32mI (138220) FIRE_DETECTOR: === fire_detector_run 结束 ===[0m
+[0;32mI (138230) FIRE_DETECTOR: 📊 总耗时统计:[0m
+[0;32mI (138230) FIRE_DETECTOR:    预处理: 27468 us (27 ms)[0m
+[0;32mI (138240) FIRE_DETECTOR:    推理: 19234630 us (19234 ms)[0m
+[0;32mI (138250) FIRE_DETECTOR:    总计: 19302622 us (19302 ms)[0m
+[0;32mI (138260) WebSocket Server: 火焰告警已发送: detected=0, confidence=0.07[0m
+[0;32mI (138260) IMAGE_PROC: ❌ 未检测到火焰 (无火概率: 0.93, 有火概率: 0.07)[0m
+[0;32mI (140330) http_camera: 图像大小: 64757 bytes (无分辨率信息)[0m
+[0;32mI (140600) http_camera: JPEG头验证通过[0m
+[0;32mI (140600) http_camera: 帧获取成功: 64757 bytes (尝试 1)[0m
+[0;32mI (140600) http_camera: 获取帧: 64757 bytes[0m
+[0;32mI (140600) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 64757[0m
+[0;32mI (140610) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (140740) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (140740) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (140740) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (140740) FIRE_DETECTOR: 输入数据前100字节和: 10396[0m
+[0;32mI (140760) FIRE_DETECTOR: 输入张量地址: 0x3c3e9670[0m
+[0;32mI (140760) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (140760) FIRE_DETECTOR: 预处理耗时: 27886 us (27 ms)[0m
+[0;32mI (140770) FIRE_DETECTOR: 开始推理...[0m

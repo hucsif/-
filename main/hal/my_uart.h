@@ -28,8 +28,10 @@ void my_uart_init(void);
 void uart_send_cmd(uint8_t cmd);
 void uart_send_beep_on(void);
 void uart_send_beep_off(void);
-// 温度数据获取
+// 传感器数据获取
 int get_latest_temperature(void);
+int get_latest_humidity(void);
+int get_latest_light_intensity(void);
 // UART中断禁用
 void uart_temp_disable_rx_intr(void);
 void uart_temp_enable_rx_intr(void);

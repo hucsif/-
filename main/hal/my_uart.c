@@ -13,6 +13,7 @@
 
 #include "hal/uart_ll.h"
 #include "esp_rom_sys.h"
+#include "ai_detection/image_processing.h"
 
 #define TAG     "stm32_uart"
 
@@ -212,6 +213,23 @@ void uart_event_task(void *pvParameters)
                                 //将采集到的传感器数据放入队列中，让发送任务处理
                                 ws_queue_sensor_data(&sensor_data);
 
+                                // 综合判断蜂鸣器：火焰检测到 或 光照>2000lux 或 湿度>70%
+                                bool has_fire = get_last_fire_detected();
+                                bool should_beep = has_fire || (sensor_data.light_intensity > 3000) || (sensor_data.humidity > 80);
+
+                                static bool last_beep_state = false;
+                                if (should_beep != last_beep_state) {
+                                    if (should_beep) {
+                                        uart_send_beep_on();
+                                        ESP_LOGI(TAG, "蜂鸣器开启 - 火焰:%d 光照:%d lux 湿度:%d%%",
+                                                 has_fire, sensor_data.light_intensity, sensor_data.humidity);
+                                    } else {
+                                        uart_send_beep_off();
+                                        ESP_LOGI(TAG, "蜂鸣器关闭 - 所有条件已恢复正常");
+                                    }
+                                    last_beep_state = should_beep;
+                                }
+
 
                             } else {
                                 ESP_LOGW(TAG, "解析数据失败: %s", received_data);
@@ -301,6 +319,19 @@ int get_latest_temperature(void)
 {
     return g_latest_sensor_data.temperature;
 }
+
+// 获取最新湿度
+int get_latest_humidity(void)
+{
+    return g_latest_sensor_data.humidity;
+}
+
+// 获取最新光照强度
+int get_latest_light_intensity(void)
+{
+    return g_latest_sensor_data.light_intensity;
+}
+
 
 
 // -------------------------UART中断的启用与禁用---------------------------

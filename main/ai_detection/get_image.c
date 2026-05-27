@@ -183,12 +183,23 @@ void camera_fetch_task(void *pvParameters)
                     // =======发送WebSocket告警=======
                     if (!last_alert_sent) {
                         ws_send_fire_alert(true,get_last_fire_confidence());
-                        uart_send_beep_on();      //发送蜂鸣器开启指令
                         last_alert_sent = true;
                     } 
                 } else {        //为检测到火焰时，重置标志
                     last_alert_sent = false;
-                    uart_send_beep_off();       //关闭蜂鸣器
+                }
+
+                // 综合判断蜂鸣器：火焰检测到 或 光照>2000lux 或 湿度>70%
+                int humidity = get_latest_humidity();
+                int light = get_latest_light_intensity();
+                bool should_beep = has_fire || (light > 3000) || (humidity > 80);
+
+                if (should_beep) {
+                    uart_send_beep_on();
+                    ESP_LOGI(TAG, "蜂鸣器开启 - 火焰:%d 光照:%d lux 湿度:%d%%", has_fire, light, humidity);
+                } else {
+                    uart_send_beep_off();
+                    ESP_LOGI(TAG, "蜂鸣器关闭 - 所有条件已恢复正常");
                 }
             }
         }
