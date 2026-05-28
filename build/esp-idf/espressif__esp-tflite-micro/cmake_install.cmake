@@ -1,4 +1,4 @@
-# Install script for directory: /home/zhu/esp32/smart_surveillance/managed_components/espressif__esp-tflite-micro
+# Install script for directory: /home/zhu/esp32/smart_surveillance/components/espressif__esp-tflite-micro
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
