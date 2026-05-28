@@ -1,0 +1,195 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40056f6f
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (26) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 27 2026 15:45:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00500000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c0d0020 size=2c4fe0h (2904032) map[0m
+[0;32mI (620) esp_image: segment 1: paddr=002d5008 vaddr=3fc9de00 size=04f9ch ( 20380) load[0m
+[0;32mI (624) esp_image: segment 2: paddr=002d9fac vaddr=40374000 size=0606ch ( 24684) load[0m
+[0;32mI (631) esp_image: segment 3: paddr=002e0020 vaddr=42000020 size=c7b60h (818016) map[0m
+[0;32mI (781) esp_image: segment 4: paddr=003a7b88 vaddr=4037a06c size=13d30h ( 81200) load[0m
+[0;32mI (809) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (810) boot: Disabling RNG early entropy source...[0m
+[0;32mI (821) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (821) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (822) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (826) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (832) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (837) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (842) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (848) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (854) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (859) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (865) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (871) MSPI Timing: PSRAM timing tuning index: 4[0m
+[0;32mI (876) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (880) esp_psram: Speed: 80MHz[0m
+[0;32mI (884) cpu_start: Multicore app[0m
+[0;32mI (1305) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1314) cpu_start: Pro cpu start user code[0m
+[0;32mI (1314) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1314) app_init: Application information:[0m
+[0;32mI (1317) app_init: Project name:     smart_surveillance[0m
+[0;32mI (1323) app_init: App version:      c9055cb-dirty[0m
+[0;32mI (1328) app_init: Compile time:     May 28 2026 07:10:02[0m
+[0;32mI (1335) app_init: ELF file SHA256:  04b3356a4...[0m
+[0;32mI (1340) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (1345) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1349) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1354) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1359) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1367) heap_init: At 3FCA4338 len 000453D8 (276 KiB): RAM[0m
+[0;32mI (1373) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1379) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1385) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM[0m
+[0;32mI (1392) esp_psram: Adding pool of 8178K of PSRAM memory to heap allocator[0m
+[0;32mI (1400) spi_flash: detected chip: boya[0m
+[0;32mI (1404) spi_flash: flash io: dio[0m
+[0;33mW (1408) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;32mI (1421) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1428) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1435) main_task: Started on CPU0[0m
+[0;32mI (1445) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1445) main_task: Calling app_main()[0m
+[0;32mI (1465) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1465) gpio: GPIO[17]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1475) uart: queue free spaces: 20[0m
+[0;32mI (1485) stm32_uart: UART初始化成功！[0m
+[0;32mI (1485) pp: pp rom version: e7ae62f[0m
+[0;32mI (1495) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1505) wifi:wifi driver task: 3fcb6388, prio:23, stack:6656, core=0[0m
+[0;32mI (1515) wifi:wifi firmware version: 0caa81945[0m
+[0;32mI (1515) wifi:wifi certification version: v7.0[0m
+[0;32mI (1515) wifi:config NVS flash: enabled[0m
+[0;32mI (1515) wifi:config nano formating: disabled[0m
+[0;32mI (1515) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1525) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1525) wifi:Init management short buffer num: 32[0m
+[0;32mI (1535) wifi:Init static tx buffer num: 16[0m
+[0;32mI (1535) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (1535) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1545) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1545) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1555) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1555) wifi_init: rx ba win: 6[0m
+[0;32mI (1555) wifi_init: accept mbox: 6[0m
+[0;32mI (1565) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1565) wifi_init: udp mbox: 6[0m
+[0;32mI (1575) wifi_init: tcp mbox: 6[0m
+[0;32mI (1575) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1575) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1585) wifi_init: tcp mss: 1440[0m
+[0;32mI (1585) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1595) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1595) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1605) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;33mW (1645) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (1725) wifi:mode : sta (9c:13:9e:aa:e2:4c)[0m
+[0;32mI (1735) wifi:enable tsf[0m
+[0;32mI (1735) wifi_manager: wifi初始化完成[0m
+Free heap: 8529488 bytes
+Chip model: esp32s3
+[0;32mI (1775) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:5, snd_ch_cfg:0x0[0m
+[0;32mI (1785) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1785) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1815) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1875) wifi:connected with OPPO Reno7 5G, aid = 4, channel 11, BW20, bssid = 5a:dd:53:58:f4:67[0m
+[0;32mI (1875) wifi:security: WPA2-PSK, phy: bgn, rssi: -26[0m
+[0;32mI (1875) wifi:pm start, type: 1[0m
+
+[0;32mI (1875) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1885) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1895) wifi_manager: Connected to AP[0m
+[0;32mI (1925) wifi:<ba-add>idx:0 (ifx:0, 5a:dd:53:58:f4:67), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2085) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (2085) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (2895) esp_netif_handlers: sta ip: 192.168.87.37, mask: 255.255.255.0, gw: 192.168.87.72[0m
+[0;32mI (2895) wifi_manager: Get ip address[0m
+[0;32mI (2895) main: wifi connect success[0m
+[0;32mI (3395) WebSocket Server: WebSocket 发送任务启动[0m
+[0;32mI (3395) WebSocket Server: 等待队列数据, client_sockfd=-1[0m
+[0;32mI (3395) stm32_uart: UART 任务启动，运行在核心 1[0m
+[0;32mI (3395) WebSocket Server: HTTP 服务器启动成功[0m
+[0;32mI (3405) WebSocket Server: WebSocket 路由注册成功: /ws[0m
+[0;32mI (3415) WebSocket Server: HTTP 路由注册成功: /[0m
+[0;32mI (3415) WebSocket Server: 最新帧路由注册成功: /latest_frame[0m
+[0;32mI (3425) WebSocket Server: Web 服务器启动成功，端口: 80[0m
+[0;32mI (3425) http_camera: HTTP Camera initialized[0m
+[0;32mI (3435) FIRE_DETECTOR: 初始化火焰分类器...[0m
+[0;32mI (3445) FIRE_DETECTOR: 模型数据地址: 0x3c0ee4a8[0m
+[0;32mI (3445) FIRE_DETECTOR: 模型数据大小: 2706528 bytes[0m
+[0;32mI (3455) FIRE_DETECTOR: 模型数据前16字节:[0m
+[0;32mI (3455) FIRE_DETECTOR: 1c 00 00 00 54 46 4c 33 14 00 20 00 1c 00 18 00 [0m
+[0;32mI (3465) FIRE_DETECTOR: 模型版本: 3[0m
+[0;32mI (3465) FIRE_DETECTOR: Tensor Arena分配成功: 3072 KB[0m
+[0;32mI (3585) FIRE_DETECTOR: 火焰分类器初始化成功[0m
+[0;32mI (3585) FIRE_DETECTOR:   输入: 224 x 224 x 3, 类型: 3[0m
+[0;32mI (3585) FIRE_DETECTOR:   输出: 2 个值, 类型: 3[0m
+[0;32mI (7225) wifi:<ba-add>idx:1 (ifx:0, 5a:dd:53:58:f4:67), tid:6, ssn:2, winSize:64[0m
+[0;31mE (8605) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (8605) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (8605) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (8605) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (14625) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (14625) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (14625) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (14625) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (20645) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (20645) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (20645) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (20645) http_camera: 连接失败 (尝试 3/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (21655) http_camera: 连接ESP32-CAM失败，已重试3次[0m
+[0;32mI (24845) WebSocket Server: 收到 HTTP 请求: /[0m
+[0;32mI (24955) WebSocket Server: HTML 页面发送成功 (10704 字节)[0m
+[0;32mI (25095) WebSocket Server: 握手结束，新连接已建立[0m
+[0;32mI (25095) WebSocket Server: Save client_fds:61[0m
+[0;31mE (28665) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (28665) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (28665) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (28665) http_camera: 连接失败 (尝试 1/3): ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (34685) esp-tls: [sock=57] select() timeout[0m
+[0;31mE (34685) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (34685) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (34685) http_camera: 连接失败 (尝试 2/3): ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (40205) http_camera: 图像大小: 80439 bytes (无分辨率信息)[0m
+[0;33mW (41225) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (41225) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (41335) http_camera: JPEG头验证通过[0m
+[0;32mI (41335) http_camera: 帧获取成功: 80439 bytes (尝试 3)[0m
+[0;32mI (41335) http_camera: 获取帧: 80439 bytes[0m
+[0;32mI (41335) IMAGE_PROC: 🔥 process_and_detect_fire 被调用，JPEG大小: 80439[0m
+[0;32mI (41355) IMAGE_PROC: RGB缓冲区分配成功: 147 KB[0m
+[0;32mI (41355) IMAGE_PROC: 原始JPEG图像: 224x224, 硬件缩放到: 224x224[0m
+[0;32mI (41485) IMAGE_PROC: 解码+缩放成功: 224x224[0m
+[0;32mI (41485) FIRE_DETECTOR: === fire_detector_run 开始 ===[0m
+[0;32mI (41485) FIRE_DETECTOR: 输入尺寸: 224x224, 期望: 224x224[0m
+[0;32mI (41495) FIRE_DETECTOR: 输入数据前100字节和: 2541[0m
+[0;32mI (41515) FIRE_DETECTOR: 输入张量地址: 0x3c3d9670[0m
+[0;32mI (41515) FIRE_DETECTOR: 输入张量大小: 150528[0m
+[0;32mI (41515) FIRE_DETECTOR: 预处理耗时: 24138 us (24 ms)[0m
+[0;32mI (41525) FIRE_DETECTOR: 开始推理...[0m
+[0;32mI (45715) WebSocket Server: 收到 HTTP 请求: /[0m
+[0;32mI (45845) WebSocket Server: HTML 页面发送成功 (10704 字节)[0m
+[0;32mI (45855) WebSocket Server: 收到数据: �
+[0;32mI (45985) WebSocket Server: 握手结束，新连接已建立[0m
+[0;32mI (45985) WebSocket Server: Save client_fds:57[0m

@@ -9,6 +9,7 @@
 #include "ai_detection/fire_detector.h"
 #include "iot/ws_server.h"
 #include "hal/my_uart.h"
+#include "esp_netif.h"
 
 #define TAG  "http_camera"
 
@@ -18,7 +19,28 @@ static size_t frame_len = 0;
 static uint32_t frame_timestamp = 0;
 static SemaphoreHandle_t frame_mutex = NULL;
 
-#define CAMERA_URL "http://192.168.87.56/ai_capture"
+// 摄像头第四位固定为 56
+#define CAMERA_IP_LAST_OCTET 56
+
+// 根据 ESP32 自身 IP 自动构造摄像头 URL
+static void build_camera_url(char *url_buf, size_t buf_size)
+{
+    esp_netif_ip_info_t ip_info;
+    esp_netif_t *netif = esp_netif_get_handle_from_ifkey("WIFI_STA_DEF");
+    if (!netif || esp_netif_get_ip_info(netif, &ip_info) != ESP_OK) {
+        // 回退到默认 IP
+        snprintf(url_buf, buf_size, "http://192.168.87.%d/ai_capture", CAMERA_IP_LAST_OCTET);
+        return;
+    }
+    uint32_t ip = ip_info.ip.addr;
+    // 把第四位替换为摄像头固定值，保留前三位
+    uint32_t camera_ip = (ip & 0x00FFFFFF) | (CAMERA_IP_LAST_OCTET << 24);
+    snprintf(url_buf, buf_size, "http://%d.%d.%d.%d/ai_capture",
+             (int)(camera_ip & 0xFF),
+             (int)((camera_ip >> 8) & 0xFF),
+             (int)((camera_ip >> 16) & 0xFF),
+             (int)((camera_ip >> 24) & 0xFF));
+}
 
 void http_camera_init(void)
 {
@@ -28,9 +50,11 @@ void http_camera_init(void)
 
 bool http_camera_fetch_frame(void)
 {
+    static char camera_url[64];
     for (int retry = 0; retry < 3; retry++) {
+        build_camera_url(camera_url,sizeof(camera_url));
         esp_http_client_config_t config = {
-            .url = CAMERA_URL,
+            .url = camera_url,
             .method = HTTP_METHOD_GET,
             .timeout_ms = 5000,
             .buffer_size = 2048,

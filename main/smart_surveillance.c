@@ -10,16 +10,10 @@
 #include "get_image.h"
 #include "ai_detection/fire_detector.h"
 #include "ai_detection/image_processing.h"
+#include "common/app_config.h"
 
 
 #define TAG  "main"
-
-// SSID和密码
-//#define DEFAULT_WIFI_SSID       "ESP32-Camera"
-//#define DEFAULT_WIFI_PASSWORD   "12345678"
-
-#define DEFAULT_WIFI_SSID       "OPPO Reno7 5G"
-#define DEFAULT_WIFI_PASSWORD   "g86h3i9e"
 
 //事件组
 static EventGroupHandle_t wifi_ev = NULL;
